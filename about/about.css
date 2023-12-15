@@ -1,0 +1,266 @@
+ 
+ :root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --color-grey: #eee;
+    --color-dark-grey: #222831;
+  }
+ /* navbar */
+ body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 3rem;
+  }
+  
+  #logo {
+    width: 50px; 
+    height: auto; 
+  }
+  
+  .navbar-heading img {
+    width: 200px; 
+    height: 50px; 
+  }
+  a{
+    text-decoration: none;
+  }
+  .navbar-form {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .navbar-heading {
+    text-align: center;
+    flex-grow: 1; 
+  }
+  #nav2{
+    margin-top: 2.5rem;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-form {
+      justify-content: start; 
+    }
+  }
+  @media (max-width: 990px) {
+    .navbar-form {
+      display: none;
+    }
+  }
+  @media (max-width: 576px) {
+    #nav2 {
+      margin-top: -4rem;
+    }
+  }
+
+  #logoimg {
+    display: none;
+  }
+  
+
+  @media only screen and (max-width: 600px) {
+    #logoimg {
+      display: inline; 
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    #nav2 {
+      background-color: whitesmoke;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        
+    }
+  
+    body {
+        padding-top: 56px; 
+    }
+  }
+
+
+.img11{
+    width: 100%;
+    height: auto;
+    margin-top: 2.5rem;
+}
+.img22{
+    width: 100%;
+    height: auto;
+}
+.test{
+    max-width: 1200px;
+    margin-left: 5.5rem;
+    
+    
+}
+@media (max-width: 576px) {
+    .test {
+      margin-left: 0rem;
+    }
+  }
+
+  .main {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .main h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+  
+  .slider {
+    max-width: 60%;
+    max-width: 60rem;
+    height: auto;
+    padding: 4rem 5rem;
+    position: relative;
+    border: 1px solid black;
+  }
+  
+  .fa-quote-left {
+    font-size: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    background-color: black;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 2rem;
+    top: -3rem;
+  }
+  
+  .slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translateX(2rem);
+    animation: slide 0.5s forwards;
+  }
+  
+  @keyframes slide {
+    to {
+      transform: translateX(0);
+    }
+  }
+  .slide-2 {
+    display: none;
+  }
+  
+  .testimonial-text {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  
+  .testimonial-text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 25%;
+    height: 1px;
+    background-color: black;
+    transform: translateX(-50%);
+  }
+  
+  .slide-img img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-grey);
+  }
+  
+  .author-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-sec);
+  }
+  
+  .author-text span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-dark-grey);
+  }
+  
+  .buttons {
+  position: absolute;
+  left: 50%; 
+  bottom: -2rem;
+  width: 9rem;
+  height: 3.5rem;
+  /* border: 2px solid var(--color-sec); */
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: var(--white);
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+  
+  .next,
+  .prev {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .next:hover,
+  .prev:hover {
+    background-color: antiquewhite;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next::after,
+  .prev::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+  
+  .next::after {
+    background-image: url(./images/icon-next.svg);
+  }
+  .prev::after {
+    background-image: url(./images/icon-prev.svg);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .slider {
+      width: 90%;
+    }
+    .buttons {
+      left: 75%;
+    }
+  }
+  

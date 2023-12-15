@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+#logo {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-heading img {
+  width: 200px; /* Adjust the width as needed */
+  height: 50px; /* Maintain aspect ratio */
+}
+a{
+  text-decoration: none;
+}
+.navbar-form {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.navbar-heading {
+  text-align: center;
+  flex-grow: 1; 
+}
+#nav2{
+  margin-top: 4.5rem;
+}
+
+@media (max-width: 576px) {
+  .navbar-form {
+    justify-content: start; /* Align left on small screens */
+  }
+}
+@media (max-width: 990px) {
+  .navbar-form {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  #nav2 {
+    margin-top: -.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .filter-box {
+    margin-top: 2rem;
+  }
+}
+/* Default styles for the logo */
+#logoimg {
+  display: none; /* Hide the logo by default */
+}
+
+@media only screen and (max-width: 600px) {
+  #logoimg {
+    display: inline; 
+  }
+}
+@media only screen and (max-width: 575px) {
+  #nav2 {
+    background-color: whitesmoke;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      
+  }
+
+  body {
+      /* padding-top: 56px; */
+  }
+}
+
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+header {
+  padding: 1rem;
+}
+
+
+
+form input {
+  width: auto;
+  padding: 0.7rem;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.btno {
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+   /* padding: 40px; */
+}
+
+.no-result {
+  display: none;
+  color: red;
+  padding-bottom: 2rem;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  #store-products {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    padding: 1rem;
+    margin-left: 3rem;
+  }
+} */
+
+.card {
+  width: 18rem;
+} 
+/* 
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+} */
+
+.card-body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-title {
+  font-family: 'Poppins';
+  color: grey;
+}
+
+.card-text {
+  font-size: small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  /* width: 200px; */
+}
+
+@media (max-width: 479px) {
+  .product-details {
+    font-size: x-small;
+    width: auto;
+    height: auto;
+    
+  }
+}
+
+#store-products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#store-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+}
+#store-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+}
+@media (max-width: 356px) {
+  .store-product{
+      
+      justify-content: space-evenly;
+  }
+}
+
+.store-product {
+  flex: 0 0 calc(25% - 1rem);
+  margin-bottom: 1rem;
+  max-width: calc(25% - 1rem);
+  padding: 0 0.5rem; 
+
+
+  box-sizing: border-box;
+}
+
+@media (max-width: 1150px) {
+  .store-product {
+    flex: 0 0 calc(33.33% - 1rem); 
+    max-width: calc(33.33% - 1rem);
+  }
+}
+
+@media (max-width: 765px) {
+  .store-product {
+    flex: 0 0 calc(50% - 1rem); 
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 635px) {
+  .store-product {
+    flex: 0 0 calc(100% - 1rem); /* 1 column on screens up to 635px */
+  
+  }
+}
+
+.card-img-top {
+  width: 200px; /* Make the image width 100% to ensure it's responsive */
+  height: 200px; /* Allow the height to adjust proportionally */
+  object-fit: cover; /* Maintain aspect ratio and crop as needed */
+  
+}
+@media (max-width: 991px) {
+  .card-img-top {
+    flex: 0 0 calc(100% - 1rem); /* 1 column on screens up to 635px */
+    max-width: calc(100% - 1rem);
+  }
+}
+@media (max-width: 445px) {
+  .card-img-top {
+    flex: 0 0 calc(100% - 1rem); /* 1 column on screens up to 635px */
+    max-width: calc(100% - 1rem);
+    height: 100px;
+    width: 100px;
+  }
+}
+
+

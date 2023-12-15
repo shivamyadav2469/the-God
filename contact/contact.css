@@ -1,0 +1,243 @@
+
+:root {
+    --bgOrange: #e84949;
+  }
+  
+  /* navbar */
+  body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 3rem;
+  }
+  
+  #logo {
+    width: 50px; 
+    height: auto; 
+  }
+  
+  .navbar-heading img {
+    width: 200px;
+    height: 50px; 
+  }
+  a{
+    text-decoration: none;
+  }
+  .navbar-form {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .navbar-heading {
+    text-align: center;
+    flex-grow: 1; 
+  }
+  #nav2{
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-form {
+      justify-content: start; 
+    }
+  }
+  @media (max-width: 990px) {
+    .navbar-form {
+      display: none;
+    }
+  }
+  @media (max-width: 576px) {
+    #nav2 {
+      margin-top: -.9rem;
+    }
+  }
+  /* Default styles for the logo */
+  #logoimg {
+    display: none; 
+  }
+  
+  /* Media query for mobile devices */
+  @media only screen and (max-width: 600px) {
+    #logoimg {
+      display: inline; 
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    #nav2 {
+      background-color: whitesmoke;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        margin-top: -4rem;
+    }
+  
+    body {
+        padding-top: 56px; 
+    }
+  }
+  
+.content{
+    text-align: center;
+    
+}
+h1{
+   font-weight: 700; 
+    letter-spacing: 0.2px;
+    margin-top: -.5rem;
+    
+}
+h3{
+    color: gray;
+    font-weight: bolder;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Satoshi", Sans-serif;
+    
+    padding: .4rem;
+}
+.wrapper{
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 7rem;
+    justify-content: space-around;
+    
+}
+.about{
+    margin-top: 5rem;
+}
+iframe {
+    width: 800px;
+    height: 600px; 
+}
+
+@media (max-width:1208px){
+    .about{
+        margin-left: 4rem;
+    }
+    iframe{
+        margin-left: 4rem;
+    }
+}
+@media (max-width: 350px) {
+  .about{
+    margin-top: 0rem;
+    margin-left: 2rem;
+  }
+}
+@media (max-width:770px){
+    .wrapper{
+        flex-direction: column;
+    }
+}
+@media (max-width:900px){
+    iframe{
+        width: 300px;
+        height: 500px;
+    }
+}
+@media (max-width:530px){
+    iframe{
+        width: 100%;
+        height: 100vh;
+        margin-left: 0rem;
+    }
+}
+@media (max-width:1208px){
+    iframe{
+         /* width: 400px; */
+        height: 400px; 
+    }
+}
+
+
+/* form */
+.contactus-form-container{
+    margin-top:25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    width:70%;
+    margin: 2rem 5rem;
+  }
+  @media (max-width: 350px) {
+    .form{
+      width: 90%;
+      margin: .2rem;
+    }
+  }
+  
+  .formfield-container{
+    width:100%;
+  }
+  
+  .formfield{
+    width:100%;
+    height:42px;
+    padding: 0 2rem;
+    font-size:18px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #1f1f1f;
+    font-weight:500;
+    border:none;
+    margin-top:27px;
+  }
+  
+  .formfield-textarea{
+    height:auto;
+    padding-top:1rem;
+  }
+  
+  #submit-btn{
+    border:none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  
+  #submit-btn:hover{
+    scale:0.9;
+  }
+  
+  .submit-icon{
+    padding:0 1rem;
+    font-size:1.5rem;
+  }
+  .btn-pink {
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-pink::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+  .btn-pink:hover::before {
+    transform: scaleX(1);
+  }
+  .btn-pink:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+  }
